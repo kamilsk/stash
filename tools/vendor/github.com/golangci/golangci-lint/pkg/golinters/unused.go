@@ -3,13 +3,12 @@ package golinters
 import (
 	"go/types"
 
-	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/packages"
-	"honnef.co/go/tools/unused"
-
 	"github.com/golangci/golangci-lint/pkg/golinters/goanalysis"
 	"github.com/golangci/golangci-lint/pkg/lint/linter"
 	"github.com/golangci/golangci-lint/pkg/result"
+	"golang.org/x/tools/go/analysis"
+	"golang.org/x/tools/go/packages"
+	"honnef.co/go/tools/unused"
 )
 
 func NewUnused() *goanalysis.Linter {
@@ -38,6 +37,14 @@ func NewUnused() *goanalysis.Linter {
 				Text:       p.Message,
 				Pos:        p.Pos,
 				Pkg:        pkg,
+				LineRange: &result.Range{
+					From: p.Pos.Line,
+					To:   p.End.Line,
+				},
+				Replacement: &result.Replacement{
+					// Suggest deleting unused stuff.
+					NeedOnlyDelete: true,
+				},
 			}, nil))
 		}
 		return issues

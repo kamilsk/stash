@@ -21,7 +21,6 @@ package ssa
 
 import (
 	"fmt"
-
 	"go/types"
 )
 

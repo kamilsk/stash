@@ -17,9 +17,8 @@ import (
 	"flag"
 	"go/ast"
 	"go/token"
-	"strings"
-
 	"go/types"
+	"strings"
 
 	"golang.org/x/tools/go/loader"
 )

@@ -11,11 +11,10 @@ import (
 	"os"
 	"strings"
 
+	"github.com/kisielk/gotool"
 	"golang.org/x/tools/go/loader"
 	"golang.org/x/tools/go/ssa"
 	"golang.org/x/tools/go/ssa/ssautil"
-
-	"github.com/kisielk/gotool"
 	"mvdan.cc/lint"
 )
 

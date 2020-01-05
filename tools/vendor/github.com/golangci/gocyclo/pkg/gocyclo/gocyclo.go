@@ -2,9 +2,8 @@ package gocyclo
 
 import (
 	"fmt"
-	"go/token"
-
 	"go/ast"
+	"go/token"
 )
 
 type Stat struct {

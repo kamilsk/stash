@@ -5,12 +5,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/go-lintpack/lintpack"
-	"github.com/pkg/errors"
-
 	_ "github.com/go-critic/go-critic/checkers" // this import register checkers
-
+	"github.com/go-lintpack/lintpack"
 	"github.com/golangci/golangci-lint/pkg/logutils"
+	"github.com/pkg/errors"
 )
 
 const gocriticDebugKey = "gocritic"

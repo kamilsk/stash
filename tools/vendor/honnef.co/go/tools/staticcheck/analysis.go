@@ -3,12 +3,11 @@ package staticcheck
 import (
 	"flag"
 
+	"golang.org/x/tools/go/analysis"
+	"golang.org/x/tools/go/analysis/passes/inspect"
 	"honnef.co/go/tools/facts"
 	"honnef.co/go/tools/internal/passes/buildssa"
 	"honnef.co/go/tools/lint/lintutil"
-
-	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/analysis/passes/inspect"
 )
 
 func newFlagSet() flag.FlagSet {

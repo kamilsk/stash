@@ -6,12 +6,11 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/uudashr/gocognit"
-	"golang.org/x/tools/go/analysis"
-
 	"github.com/golangci/golangci-lint/pkg/golinters/goanalysis"
 	"github.com/golangci/golangci-lint/pkg/lint/linter"
 	"github.com/golangci/golangci-lint/pkg/result"
+	"github.com/uudashr/gocognit"
+	"golang.org/x/tools/go/analysis"
 )
 
 const gocognitName = "gocognit"
